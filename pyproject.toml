@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lang_detector"
+version = "0.1.0"
+dependencies = [
+    "fasttext>=0.9.2",
+    "numpy>=1.20.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lang_detector = ["lang_classifier.ftz"]
